@@ -1,4 +1,4 @@
-body, html{ width: 100%; height: 100% ;}
+body, html{ width: 100%; height: 100% ; background-color: #00ffe7;}
 .nav-brand{
     background-color: chartreuse;
     padding: 2%;
@@ -27,7 +27,7 @@ a:hover{
 }
 
 a:active{
-
+ /*activer un son           */
 }
 
 @keyframes rainbow {
