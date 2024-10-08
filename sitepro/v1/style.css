@@ -1,15 +1,15 @@
-body, html{ width: 100%; height: 100% ; background-color: #00ffe7;}
+body, html{ width: 100%; height: 100% ;}
 .nav-brand{
     background-color: chartreuse;
     padding: 2%;
     text-decoration: none;
 }
-.navbar{
-    width: 200px;
-    margin-top: 1.5%;
+.navbarPerso{
+    width: 400px;
     display: flex;
     justify-content: space-around;
     padding: 1%;
+    margin-left: 50%;
 }
 .bg-light{
     background-color: white;
@@ -17,24 +17,59 @@ body, html{ width: 100%; height: 100% ; background-color: #00ffe7;}
 .bg-dark{
 background-color: black;
 }
+
+.menuPerso{
+    display: flex;
+    align-items: baseline;
+}
 /*
 a:hover = quand on passe sur un lien
 a:active = quand on clique dessus
 */
 a:hover{ 
-    animation-duration: 2s;
-    animation: rainbow; 
+    
+    animation: rainbow 0.5s;
+    animation-iteration-count: infinite;
 }
 
 a:active{
- /*activer un son           */
+    transform: translate(3%, 3%);
+    opacity: 50%;
 }
 
 @keyframes rainbow {
-    from{
+    0%{
         background-color: chartreuse;
     }
-    to{
+    10%{
+        background-color: rgb(155, 226, 41);
+    }
+    20%{
+        background-color: rgb(224, 218, 41);
+    }
+    30%{
+        background-color: rgb(226, 150, 26);
+    }
+    40%{
+        background-color: rgb(236, 91, 25);
+    }
+    50%{
+        background-color: rgb(230, 34, 34);
+    }
+    60%{
+        background-color: rgb(231, 43, 112);
+    }
+    70%{
+        background-color: rgb(187, 52, 217);
+    }
+    80%{
+        background-color: rgb(50, 136, 229);
+    }
+    90%{
         background-color: aqua;
     }
+    100%{
+        background-color: chartreuse;
+    }
+
 }
