@@ -10,7 +10,9 @@ body, html{
 .elfique {
     font-family: 'Eldritch', serif;
 }
-
+#currentpage{
+    background-color: #7464a1;
+}
 .nav-brand{
     background-color: chartreuse;
     padding: 2%;
@@ -36,8 +38,7 @@ background-color: black;
 .menuPerso{
     display: flex; 
     align-items: center; 
-    justify-content: space-around; 
-    margin-top: 10px; 
+    justify-content: space-around;  
     padding:10px;
 }
 p,h1,h2,h4,footer,ul,a{
@@ -52,6 +53,10 @@ p,h1,h2,h4,footer,ul,a{
 .imgTooBig{
     width: 30%;
     height: 30%;
+}
+.paraCenter{
+    display: flex;
+    justify-content: center;
 }
 /*
 a:hover = quand on passe sur un lien
