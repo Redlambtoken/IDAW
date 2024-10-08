@@ -1,11 +1,23 @@
-body, html{ width: 100%; height: 100% ;}
+body, html{ 
+    width: 100%;
+    height: 100% ;
+    background-image: url("image/backgroundParchemin.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.elfique {
+    font-family: 'Eldritch', serif;
+}
+
 .nav-brand{
     background-color: chartreuse;
     padding: 2%;
     text-decoration: none;
 }
 .navbarPerso{
-    width: 400px;
+    width: 450px;
     display: flex;
     justify-content: space-around;
     padding: 1%;
@@ -17,10 +29,29 @@ body, html{ width: 100%; height: 100% ;}
 .bg-dark{
 background-color: black;
 }
-
+.ListeWithWinnie{
+    display:flex;
+    justify-content: space-evenly;
+}
 .menuPerso{
-    display: flex;
-    align-items: baseline;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-around; 
+    margin-top: 10px; 
+    padding:10px;
+}
+p,h1,h2,h4,footer,ul,a{
+    font-family: 'Eldritch', serif;
+    font-size: 120%;
+}
+.center{
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+}
+.imgTooBig{
+    width: 30%;
+    height: 30%;
 }
 /*
 a:hover = quand on passe sur un lien
@@ -71,5 +102,9 @@ a:active{
     100%{
         background-color: chartreuse;
     }
+}
 
+@font-face {
+    font-family: 'Eldritch';
+    src: url('police/biffes-calligraphy.regular.ttf') format('truetype');
 }
