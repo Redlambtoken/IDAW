@@ -1,0 +1,115 @@
+body, html{ 
+    width: 100%;
+    height: 100% ;
+    background-image: url("image/backgroundParchemin.jpeg");
+    background-size: cover;
+        background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.elfique, nav a {
+    font-family: 'Eldritch', serif !important;
+}
+#currentpage{
+    background-color: #7464a1;
+}
+.nav-brand{
+    background-color: chartreuse;
+    padding: 2%;
+    text-decoration: none;
+}
+.navbarPerso{
+    width: 450px;
+    display: flex;
+    justify-content: space-around;
+    padding: 1%;
+    margin-left: 50%;
+}
+.bg-light{
+    background-color: white;
+} 
+.bg-dark{
+background-color: black;
+}
+.ListeWithWinnie{
+    display:flex;
+    justify-content: space-evenly;
+}
+.menuPerso{
+    display: flex; 
+    align-items: center; 
+    justify-content: space-around;  
+    padding:10px;
+}
+p,h1,h2,h4,footer,ul,a{
+    font-family: 'Eldritch', serif;
+    font-size: 120%;
+}
+.center{
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+}
+.imgTooBig{
+    width: 30%;
+    height: 30%;
+}
+.paraCenter{
+    display: flex;
+    justify-content: center;
+}
+/*
+a:hover = quand on passe sur un lien
+a:active = quand on clique dessus
+*/
+a:hover{ 
+    
+    animation: rainbow 0.5s;
+    animation-iteration-count: infinite;
+}
+
+a:active{
+    transform: translate(3%, 3%);
+    opacity: 50%;
+}
+
+@keyframes rainbow {
+    0%{
+        background-color: chartreuse;
+    }
+    10%{
+        background-color: rgb(155, 226, 41);
+    }
+    20%{
+        background-color: rgb(224, 218, 41);
+    }
+    30%{
+        background-color: rgb(226, 150, 26);
+    }
+    40%{
+        background-color: rgb(236, 91, 25);
+    }
+    50%{
+        background-color: rgb(230, 34, 34);
+    }
+    60%{
+        background-color: rgb(231, 43, 112);
+    }
+    70%{
+        background-color: rgb(187, 52, 217);
+    }
+    80%{
+        background-color: rgb(50, 136, 229);
+    }
+    90%{
+        background-color: aqua;
+    }
+    100%{
+        background-color: chartreuse;
+    }
+}
+
+@font-face {
+    font-family: 'Eldritch';
+    src: url('police/biffes-calligraphy.regular.ttf') format('truetype');
+}
