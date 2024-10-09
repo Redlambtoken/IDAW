@@ -19,7 +19,7 @@ body, html{
     text-decoration: none;
 }
 .navbarPerso{
-    width: 450px;
+    width: 540px;
     display: flex;
     justify-content: space-around;
     padding: 1%;
@@ -63,6 +63,7 @@ a:hover = quand on passe sur un lien
 a:active = quand on clique dessus
 */
 a:hover{ 
+    
     animation: rainbow 0.5s;
     animation-iteration-count: infinite;
 }
