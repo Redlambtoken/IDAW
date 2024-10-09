@@ -19,11 +19,11 @@ body, html{
     text-decoration: none;
 }
 .navbarPerso{
-    width: 540px;
+    width: 750px;
     display: flex;
     justify-content: space-around;
     padding: 1%;
-    margin-left: 50%;
+    margin-left: 40%;
 }
 .bg-light{
     background-color: white;
