@@ -19,7 +19,7 @@ body, html{
     text-decoration: none;
 }
 .navbarPerso{
-    width: 450px;
+    width: 540px;
     display: flex;
     justify-content: space-around;
     padding: 1%;
