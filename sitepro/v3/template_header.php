@@ -8,7 +8,8 @@
         <link rel="stylesheet" type="text/css" href="bootstrap_style/css/styles.css" />
         <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap" rel="stylesheet">
         <link rel="icon" type="image/x-icon" href="image/redlambtoken.ico">
+        <link rel="stylesheet" type="text/css" href="style'.$_COOKIE['style'].'.css" />
         <title>'. $currentPageId .'</title>
     </head>';
-    }
+}
 ?>

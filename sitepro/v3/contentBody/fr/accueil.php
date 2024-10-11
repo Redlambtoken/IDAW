@@ -7,7 +7,7 @@
             <li>mes projets</li>
             <li>des easters-eggs (mais il faut pas le dire)</li>
         </ul>
-        <img  style = "width: 100px" src="https://img.20mn.fr/bvDOOf-DQkGQM5BWbTa0dSk/1444x920_extrait-winnie-ourson-film">
+        <img  style = "width: 150px" src="https://img.20mn.fr/bvDOOf-DQkGQM5BWbTa0dSk/1444x920_extrait-winnie-ourson-film">
         </div>
     </div>
     <!--Pense à enlever la page admin.php -->

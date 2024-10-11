@@ -1,5 +1,12 @@
-
+   <?php session_start();?>
 <?php require_once("template_header.php");
+$_COOKIE['style'] = 1;
+setcookie('style',1);
+if(isset($_GET['css'])) {
+   $_COOKIE['style'] = substr($_GET['css'],-1);
+   //setcookie(substr($_GET['css'],0,-1), substr($_GET['css'],-1));
+   //header('Refresh: 0; URL=index.php'); 
+   } 
 $currentPageId = "index";
  if(isset($_GET['page'])) {
  $currentPageId = $_GET['page'];
@@ -29,13 +36,6 @@ $currentPageLang = "fr";
     require_once("contentBodt/".$currentPageLang."error.php");
     }
  ?>
- <form id="style_form" action="index.php" method="GET">
-   <select name="css">
-      <option value="style1">style1</option>
-      <option value="style2">style2</option>
-   </select>
-   <input type="submit" value="Appliquer" />
- </form>
  </section>
  <?php require_once("template_bottom.php");
 ?>

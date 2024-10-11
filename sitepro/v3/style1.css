@@ -1,0 +1,13 @@
+.elfique, nav a {
+    font-family: 'Japanese', serif !important;
+}
+
+p,h1,h2,h4,footer,ul,a{
+    font-family: 'Japanese', serif;
+    font-size: 120%;
+}
+
+@font-face {
+    font-family: 'Japanese';
+    src: url('police/Almost\ Japanese.ttf') format('truetype');
+}
