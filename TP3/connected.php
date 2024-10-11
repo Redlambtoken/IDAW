@@ -20,7 +20,12 @@ $tryLogin=$_POST['login'];
  $errorText = "Merci d'utiliser le formulaire de login";
  if(!$successfullyLogged) {
  echo $errorText;
+ echo '<br /><a href="http://localhost/IDAW/TP3/login.php">Connection</a>';
  } else {
+    session_start();
+    $_SESSION['login'] = $login;
+    //$_SESSION['password']   = $tryPwd;
  echo "<h1>Bienvenu ".$login."</h1>";
+ echo '<br /><a href="http://localhost/IDAW/sitepro/v3/index.php">Accueil</a>';
  }
  ?>

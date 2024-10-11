@@ -1,0 +1,17 @@
+html,body{
+    font-size: 120%;
+}
+
+.elfique, nav a {
+    font-family: 'Love', serif !important;
+}
+
+p,h1,h2,h4,footer,ul,a{
+    font-family: 'Love', serif;
+    font-size: 120%;
+}
+
+@font-face {
+    font-family: 'Love';
+    src: url('police/I\ Love\ Glitter.ttf') format('truetype');
+}   
