@@ -4,8 +4,6 @@ $_COOKIE['style'] = 1;
 setcookie('style',1);
 if(isset($_GET['css'])) {
    $_COOKIE['style'] = substr($_GET['css'],-1);
-   //setcookie(substr($_GET['css'],0,-1), substr($_GET['css'],-1));
-   //header('Refresh: 0; URL=index.php'); 
    } 
 $currentPageId = "index";
  if(isset($_GET['page'])) {

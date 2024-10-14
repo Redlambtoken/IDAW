@@ -1,9 +1,9 @@
 .elfique, nav a {
-    font-family: 'Japanese', serif !important;
+    font-family: 'Arial', serif !important;
 }
 
 p,h1,h2,h4,footer,ul,a{
-    font-family: 'Japanese', serif;
+    font-family: 'Arial', serif;
     font-size: 120%;
 }
 
