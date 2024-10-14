@@ -18,7 +18,7 @@
                 echo '<div class="menuPerso bg-dark">
                 <h1 style="color: white;">Accueil</h1>
                 <nav class="navbarPerso" style="margin-left: 40%; width:800px;">
-                <a class="btn btn-primary" href="http://localhost/IDAW/TP3/login.php?login=D"> Déconnexion</a>
+                <a class="btn btn-primary" href="../../TP3/login.php?login=D"> Déconnexion</a>
                 <a class="btn btn-primary">'.$_SESSION['login'].'</a>';
                 foreach($mymenu as $pageId => $pageParameters) {
                         echo '<a class="btn btn-primary" href="index.php?page='.$pageId.'&lang=fr">' . $pageId . '</a>';       
@@ -29,7 +29,7 @@
                 echo '<div class="menuPerso bg-dark">
                 <h1 style="color: white;">Accueil</h1>
                 <nav class="navbarPerso">
-                <a class="btn btn-primary" href="http://localhost/IDAW/TP3/login.php?login=D"> Déconnexion</a>
+                <a class="btn btn-primary" href="../../TP3/login.php?login=D"> Déconnexion</a>
                 <a class="btn btn-primary">'.$_SESSION['login'].'</a>';
                 foreach($mymenu as $pageId => $pageParameters) {
                     if($pageId == $currentPageId){
@@ -53,7 +53,7 @@
                 echo '<div class="menuPerso bg-dark">
                 <h1 style="color: white;">Accueil</h1>
                 <nav class="navbarPerso" style="margin-left: 40%; width:800px;">
-                <a class="btn btn-primary" href="http://localhost/IDAW/TP3/login.php?login=D"> Disconnect</a>
+                <a class="btn btn-primary" href="../../TP3/login.php?login=D"> Disconnect</a>
                 <a class="btn btn-primary">'.$_SESSION['login'].'</a>';
                 foreach($mymenu as $pageId => $pageParameters) {
                         echo '<a class="btn btn-primary" href="index.php?page='.$pageId.'&lang=en">' . $pageId . '</a>';       
@@ -64,7 +64,7 @@
                 echo '<div class="menuPerso bg-dark">
                 <h1 style="color: white;">Accueil</h1>
                 <nav class="navbarPerso" >
-                <a class="btn btn-primary" href="http://localhost/IDAW/TP3/login.php?login=D"> Disconnect</a>
+                <a class="btn btn-primary" href="../../TP3/login.php?login=D"> Disconnect</a>
                 <a class="btn btn-primary">'.$_SESSION['login'].'</a>';
                 foreach($mymenu as $pageId => $pageParameters) {
                     if($pageId == $currentPageId){
@@ -91,7 +91,7 @@
                     echo '<div class="menuPerso bg-dark">
                     <h1 style="color: white;">Accueil</h1>
                     <nav class="navbarPerso" style="margin-left: 40%; width:800px;">
-                    <a class="btn btn-primary" href="http://localhost/IDAW/TP3/login.php"> Connection</a>';
+                    <a class="btn btn-primary" href="../../TP3/login.php"> Connection</a>';
                     foreach($mymenu as $pageId => $pageParameters) {
                             echo '<a class="btn btn-primary" href="index.php?page='.$pageId.'&lang=fr">' . $pageId . '</a>';       
                     }
@@ -101,7 +101,7 @@
                     echo '<div class="menuPerso bg-dark">
                     <h1 style="color: white;">Accueil</h1>
                     <nav class="navbarPerso">
-                    <a class="btn btn-primary" href="http://localhost/IDAW/TP3/login.php    "> Connection</a>';
+                    <a class="btn btn-primary" href="../../TP3/login.php"> Connection</a>';
                     foreach($mymenu as $pageId => $pageParameters) {
                         if($pageId == $currentPageId){
                             echo '<a class="btn btn-primary" id="currentpage" href="index.php?page='.$currentPageId .'&lang=fr">' . $currentPageId . '</a>';
@@ -124,7 +124,7 @@
                     echo '<div class="menuPerso bg-dark">
                     <h1 style="color: white;">Accueil</h1>
                     <nav class="navbarPerso" style="margin-left: 40%; width:800px;">
-                    <a class="btn btn-primary" href="http://localhost/IDAW/TP3/login.php"> Connection</a>';
+                    <a class="btn btn-primary" href="../../TP3/login.php"> Connection</a>';
                     foreach($mymenu as $pageId => $pageParameters) {
                             echo '<a class="btn btn-primary" href="index.php?page='.$pageId.'&lang=en">' . $pageId . '</a>';       
                     }
@@ -134,7 +134,7 @@
                     echo '<div class="menuPerso bg-dark">
                     <h1 style="color: white;">Accueil</h1>
                     <nav class="navbarPerso" >
-                    <a class="btn btn-primary" href="http://localhost/IDAW/TP3/login.php"> Connection</a>';
+                    <a class="btn btn-primary" href="../../TP3/login.php"> Connection</a>';
                     foreach($mymenu as $pageId => $pageParameters) {
                         if($pageId == $currentPageId){
                             echo '<a class="btn btn-primary" id="currentpage" href="index.php?page='.$currentPageId .'&lang=en">' . $pageParameters[0] . '</a>';
