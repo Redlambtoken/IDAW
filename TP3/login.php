@@ -24,7 +24,7 @@ if(isset($_GET['login'])) {
     </table>
  </form>
 
- <form id="style_form" action="/IDAW/sitepro/v3/index.php" method="G    ET">
+ <form id="style_form" action="/IDAW/sitepro/v3/index.php" method="GET">
    <select name="css">
       <option value="style1">style1</option>
       <option value="style2">style2</option>
