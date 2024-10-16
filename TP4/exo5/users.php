@@ -26,7 +26,11 @@
         $sql = "INSERT INTO `users`(`name`, `email`) VALUES ('".$data->name."','".$data->email."')";
         $exe = $db->query($sql);
         $res = $exe->fetchAll(PDO::FETCH_OBJ);
-        return 201;
+        $sql_get = "SELECT * FROM `users` WHERE email = '".$data->email."'";
+        $exe_get = $db->query($sql_get);
+        $res_get = $exe_get->fetchAll(PDO::FETCH_OBJ);
+        $response = array("ID"=> $res_get[0]->id, "Name"=>$res_get[0]->name, "Email"=>$res_get[0]->email);
+        return $response;
     }
     return 400;
     }
@@ -87,15 +91,19 @@ function delete_users($db, $json){
         exit(json_encode(value: $result));
     case 'POST':
         $result = create_users($pdo, json: file_get_contents('php://input'));
-        http_response_code(response_code: $result);
+        if($result != 400 && $result != 409){
+            http_response_code(response_code: 200);
+        }
+        else {
+            http_response_code(response_code: $result);
+        }
         exit(json_encode(value: $result));
     case 'PUT':
         $result = update_users($pdo, json: file_get_contents('php://input'));
-        http_response_code(response_code: 200);
+        http_response_code(response_code: $result);
         exit(json_encode(value: $result));
     case 'DELETE':
         $result = delete_users($pdo, json: file_get_contents('php://input'));
         http_response_code(response_code: $result);
         exit(json_encode(value: $result));
     }
- ?>

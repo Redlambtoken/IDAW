@@ -1,0 +1,524 @@
+{
+	"info": {
+		"_postman_id": "3c8e8dd3-9479-4930-bc3c-7ac6162940ac",
+		"name": "IDAW",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39052448"
+	},
+	"item": [
+		{
+			"name": "http://localhost/IDAW/TP4/exo5/users.php",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Non-Non\",\r\n    \"email\":\"Non@gmail.com\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/IDAW/TP4/exo5/users.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"IDAW",
+						"TP4",
+						"exo5",
+						"users.php"
+					],
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": " application/json",
+							"disabled": true
+						},
+						{
+							"key": "{\"niveauEnergie\"",
+							"value": " 0}'",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/IDAW/TP4/exo5/users.php",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/IDAW/TP4/exo5/users.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"IDAW",
+						"TP4",
+						"exo5",
+						"users.php"
+					],
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": " application/json",
+							"disabled": true
+						},
+						{
+							"key": "{\"niveauEnergie\"",
+							"value": " 0}'",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/IDAW/TP4/exo5/users.php?id=6",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/IDAW/TP4/exo5/users.php?id=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"IDAW",
+						"TP4",
+						"exo5",
+						"users.php"
+					],
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": " application/json",
+							"disabled": true
+						},
+						{
+							"key": "{\"niveauEnergie\"",
+							"value": " 0}'",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/IDAW/TP4/exo5/users.php",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Non-Non\",\r\n    \"srdfcgvhb\":\"Non@gmail.com\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/IDAW/TP4/exo5/users.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"IDAW",
+						"TP4",
+						"exo5",
+						"users.php"
+					],
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": " application/json",
+							"disabled": true
+						},
+						{
+							"key": "{\"niveauEnergie\"",
+							"value": " 0}'",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/IDAW/TP4/exo5/users.php",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Non-Non\",\r\n    \"email\":\"Non@gmail.com\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/IDAW/TP4/exo5/users.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"IDAW",
+						"TP4",
+						"exo5",
+						"users.php"
+					],
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": " application/json",
+							"disabled": true
+						},
+						{
+							"key": "{\"niveauEnergie\"",
+							"value": " 0}'",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/IDAW/TP4/exo5/users.php",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 6,\r\n    \"name\":\"Non-Non\",\r\n    \"email\":\"dxfcgvhbnj@gmail.com\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/IDAW/TP4/exo5/users.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"IDAW",
+						"TP4",
+						"exo5",
+						"users.php"
+					],
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": " application/json",
+							"disabled": true
+						},
+						{
+							"key": "{\"niveauEnergie\"",
+							"value": " 0}'",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/IDAW/TP4/exo5/users.php",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 6,\r\n    \"name\":\"iusdfh\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/IDAW/TP4/exo5/users.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"IDAW",
+						"TP4",
+						"exo5",
+						"users.php"
+					],
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": " application/json",
+							"disabled": true
+						},
+						{
+							"key": "{\"niveauEnergie\"",
+							"value": " 0}'",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/IDAW/TP4/exo5/users.php",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 6\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/IDAW/TP4/exo5/users.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"IDAW",
+						"TP4",
+						"exo5",
+						"users.php"
+					],
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": " application/json",
+							"disabled": true
+						},
+						{
+							"key": "{\"niveauEnergie\"",
+							"value": " 0}'",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/IDAW/TP4/exo5/users.php",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 0,\r\n    \"name\":\"Non-Non\",\r\n    \"email\":\"dxfcgvhbnj@gmail.com\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/IDAW/TP4/exo5/users.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"IDAW",
+						"TP4",
+						"exo5",
+						"users.php"
+					],
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": " application/json",
+							"disabled": true
+						},
+						{
+							"key": "{\"niveauEnergie\"",
+							"value": " 0}'",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/IDAW/TP4/exo5/users.php",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 0\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/IDAW/TP4/exo5/users.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"IDAW",
+						"TP4",
+						"exo5",
+						"users.php"
+					],
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": " application/json",
+							"disabled": true
+						},
+						{
+							"key": "{\"niveauEnergie\"",
+							"value": " 0}'",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/IDAW/TP4/exo5/users.php",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 1\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/IDAW/TP4/exo5/users.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"IDAW",
+						"TP4",
+						"exo5",
+						"users.php"
+					],
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": " application/json",
+							"disabled": true
+						},
+						{
+							"key": "{\"niveauEnergie\"",
+							"value": " 0}'",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
