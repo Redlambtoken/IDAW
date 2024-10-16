@@ -107,4 +107,3 @@ function delete_users($db, $json){
         http_response_code(response_code: $result);
         exit(json_encode(value: $result));
     }
- ?>
