@@ -13,6 +13,8 @@
  catch (PDOException $erreur) {
  echo 'Erreur : '.$erreur->getMessage();
  }
+
+ 
  $file = file_get_contents('create_db.sql', true);
 
 try{
