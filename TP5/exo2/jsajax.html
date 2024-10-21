@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
+        <script  src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>/>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <title>tabletest</title>
+            <style>
+                body{ margin-top: 5em; }
+                .table {
+                    margin-top: 100px;
+                    margin-bottom: 100px;
+                }
+            </style>
+    </head>
+    <body>
+        <table id="example" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>email</th>
+                </tr>
+            </thead>
+        </table>
+        <form id="addStudentForm" action="" onsubmit="onFormSubmit();">
+            <div class="form-group row">
+                <label for="inputNom" class="col-sm-2 col-form-label">Name *</label>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" id="inputNom"  required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPrenom" class="col-sm-2 col-form-label">Email *</label>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" id="inputPrenom"  required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <span class="col-sm-2"></span>
+                <div class="col-sm-2">
+                    <button type="submit" class="btn btn-primary form-control">Submit</button>
+                </div>
+            </div>
+        </form>
+        <script>
+        window.addEventListener("load", (event) => {
+                $('#example').DataTable( {
+                    ajax: {
+                                'url' : '../../TP4/exo5/users.php',
+                                'type':'GET',
+                                'dataSrc' : ''
+                            },
+                    columns: [
+                        { data: "id" },
+                        { data: "name" },
+                        { data: "email" },
+                        { "defaultContent": "<button onclick='CRUDdelete(this);'>DELETE</button>"},
+                        { "defaultContent": "<button onclick='CRUDupdate(this);'>Update</button>"}
+                    ]
+                    });
+        });
+
+
+        function CRUDdelete(button){
+            let textID = {
+                id: button.closest('tr').firstElementChild.innerHTML
+            }
+            button.closest('tr').remove();
+            $.ajax("../../TP4/exo5/users.php",{
+                data: JSON.stringify(textID),
+                contentType: 'application/json',
+                type: 'DELETE',
+                success: function(){
+                    $('#example').DataTable().ajax.reload();
+                }
+            })
+        }
+
+        function CRUDupdate(button){
+
+        }
+
+        function onFormSubmit() {
+                        // prevent the form to be sent to the server
+                        event.preventDefault();
+                        let nom = $("#inputNom").val();
+                        let prenom = $("#inputPrenom").val();
+                        let row = {
+                                name: nom,
+                                email: prenom
+                            }
+                        $.ajax("../../TP4/exo5/users.php",{
+                            data: JSON.stringify(row),
+                            contentType: 'application/json',
+                            type: 'POST',
+                            success: function(){
+                                $('#example').DataTable().ajax.reload();
+                            }
+                        })
+                    }
+        </script>
+    </body>
+</html>
