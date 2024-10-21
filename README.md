@@ -1,4 +1,4 @@
-# Titre
+# John API
 
 This API got 4 endpoints with the same URL :
 
