@@ -69,7 +69,8 @@
                 id: button.closest('tr').firstElementChild.innerHTML
             }
             button.closest('tr').remove();
-            $.ajax("../../TP4/exo5/users.php",{
+            $.ajax("../../TP4/exo5/users.php",{ //attention ici le frontend et le backend sont liés donc on peut pas redéployer la machine si le back et le front sont sur deux trucs différents
+                //il faut remplacer '../../TP4/exo5/' par un préfixe par exemple 'http://localhost/2024-git-eleves/06-Fruleux/TP4/exo5'
                 data: JSON.stringify(textID),
                 contentType: 'application/json',
                 type: 'DELETE',
@@ -79,10 +80,93 @@
             })
         }
 
-        function CRUDupdate(button){
+        
 
+        function CRUDupdate(button){
+            let myLine = button.closest('tr')
+            let i = 0;
+            for(let child of myLine.children){
+                let td = document.createElement("td");
+                let input = document.createElement("input");
+                    input.setAttribute("type","text")
+                    input.setAttribute("required","true")
+                    input.setAttribute("value", child.innerHTML);
+                    input.setAttribute("id", i);
+                    td.appendChild(input);
+                if(i>0 && i <3){
+                    child.replaceWith(td);
+                }
+                else if (i == 3){
+                    let tdHidden = document.createElement("td");
+                    let button = document.createElement("button");
+                    button.setAttribute("style","display : none")
+                    tdHidden.appendChild(button);
+                    child.replaceWith(tdHidden);
+                }
+                else if( i== 4){
+                    let td = document.createElement("td");
+                    let form = document.createElement("form")
+                    form.setAttribute("onsubmit", "CRUDUpdateFinal(this)");
+                    form.setAttribute("action", "");
+                    let buttonUpdate = document.createElement("button");
+                    buttonUpdate.setAttribute("type","submit")
+                    buttonUpdate.textContent = "Update";
+                    form.appendChild(buttonUpdate);
+                    td.appendChild(form);    
+                    child.replaceWith(td);
+                }
+                i++;
+            }
         }
 
+        /*
+        <form action="" onsubmit="updateCRUDFinale(${id});">
+            <button type="submit">UPDATE</button>
+        </form>
+        */
+
+        function CRUDUpdateFinal(button){
+            let myLine = button.closest('tr')
+            let array = [];
+            let i = 0;
+            let inputUpdate = document.getElementById("1");
+            inputUpdate.setAttribute('value', inputUpdate.value)
+            inputUpdate = document.getElementById("2");
+            inputUpdate.setAttribute('value', inputUpdate.value)
+            for(let child of myLine.children){
+                if (i == 3){
+                    break;
+                }
+                if(child.firstElementChild != null){
+                    array.push(child.firstElementChild.attributes[2].textContent);
+                }
+                else {
+                    array.push(child.innerHTML);
+                }
+                i++;
+            }
+            let json = {
+                id : array[0],
+                name : array[1],
+                email : array[2]
+            };
+            event.preventDefault();
+            $.ajax("../../TP4/exo5/users.php",{
+                            data: JSON.stringify(json),
+                            contentType: 'application/json',
+                            type: 'PUT',
+                            success: function(){
+                                $('#example').DataTable().ajax.reload();
+                            }
+                        })
+        }
+        /*
+        {
+            "id": 6,
+            "name":"toto",
+            "email":"tata@gmail.com"
+        }
+        */
         function onFormSubmit() {
                         // prevent the form to be sent to the server
                         event.preventDefault();
