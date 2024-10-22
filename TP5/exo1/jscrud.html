@@ -21,7 +21,7 @@
                                 <th scope="col">Prenom</th>
                                 <th scope="col">Date de naissance</th>
                                 <th scope="col">Aime le cours Web</th>
-                                <th scope="col">Remarques</th>
+                                <!-- <th scope="col">Remarques</th> -->
                                 <th scope="col">CRUD</th>
                             </tr>
                         </thead>
@@ -31,12 +31,29 @@
                     </table>
                     <form id="addStudentForm" action="" onsubmit="onFormSubmit();">
                         <div class="form-group row">
-                            <label for="inputNom" class="col-sm-2 col-form-label">Nom*</label>
+                            <label for="inputNom" class="col-sm-2 col-form-label">Nom *</label>
                             <div class="col-sm-3">
-                                <input type="text" class="form-control" id="inputNom" >
+                                <input type="text" class="form-control" id="inputNom"  required>
                             </div>
                         </div>
-                        ...
+                        <div class="form-group row">
+                            <label for="inputPrenom" class="col-sm-2 col-form-label">Prenom *</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="inputPrenom"  required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputDate" class="col-sm-2 col-form-label">Date de naissance *</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="inputDate"  required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputLike" class="col-sm-2 col-form-label">Aime le cours de web*</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="inputLike" value="Oui !"  required>
+                            </div>
+                        </div>
                         <div class="form-group row">
                             <span class="col-sm-2"></span>
                             <div class="col-sm-2">
@@ -48,9 +65,57 @@
                     function onFormSubmit() {
                         // prevent the form to be sent to the server
                         event.preventDefault();
+                        let id = $("#studentsTableBody tr").length; //id de chaque ligne qui est envoyé dans le CRUD
                         let nom = $("#inputNom").val();
-                        $("#studentsTableBody").append(`<tr><td>${nom}</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>`);
-                        }
+                        let prenom = $("#inputPrenom").val();
+                        let date = $("#inputDate").val();
+                        let like = $("#inputLike").val();
+                        let row = { id: id,
+                                nom: nom,
+                                prenom:prenom,
+                                date: date,
+                                like: like }
+                        $("#studentsTableBody").append(`<tr id="${id}"><td>${nom}<td></td><td>${prenom}</td><td>${date}</td><td>${like}</td><td><button onclick="deleteCRUD(${id})"> DELETE </button> <button onclick="updateCRUD(${id},'${nom}','${prenom}','${date}','${like}')"> UPDATE </button></td></tr>`);
+                    }
+
+                    function deleteCRUD(id){
+                        let str_tmp = "#studentsTableBody #" + id; 
+                        $(str_tmp).remove();
+                    }
+
+                    function updateCRUD(id, nom, prenom, date, like){
+                        let str_tmp = "#studentsTableBody #" + id; 
+                        $(str_tmp).replaceWith(`
+                        <tr id="${id}">
+                                <td>
+                                    <input type="text" id="inputNomUpdate"  required>
+                                </td>
+                                <td>
+                                    <input type="text" id="inputPrenomUpdate"  required>
+                                </td>
+                                <td>
+                                    <input type="text" id="inputDateUpdate"  required>
+                                </td>
+                                <td>
+                                    <input type="text" id="inputLikeUpdate" value="Oui !"  required>
+                                </td>
+                                <td>
+                                    <form action="" onsubmit="updateCRUDFinale(${id});">
+                                        <button type="submit">UPDATE</button>
+                                    </form>
+                                </td>
+                        </tr>`);
+                    }
+
+                    function updateCRUDFinale(id){
+                        event.preventDefault();
+                        let str_tmp = "#studentsTableBody #" + id
+                        let nom = $("#inputNomUpdate").val();
+                        let prenom = $("#inputPrenomUpdate").val();
+                        let date = $("#inputDateUpdate").val();
+                        let like = $("#inputLikeUpdate").val();
+                        $(str_tmp).replaceWith(`<tr id="${id}"><td>${nom}<td></td><td>${prenom}</td><td>${date}</td><td>${like}</td><td><button onclick="deleteCRUD(${id})"> DELETE </button> <button onclick="updateCRUD(${id},'${nom}','${prenom}','${date}','${like}')"> UPDATE </button></td></tr>`);
+                    }
                     </script>
     </body>
 </html>
